@@ -20,7 +20,7 @@
 | 1.0.0 | 2026-11-19 | Audit Review Board | Initial pre-development documentation audit and RTM. |
 | 2.0.0 | 2026-11-20 | Audit Review Board | Manual payment audit, lead desk traceability, 1-year calendar engine verification. |
 | 2.1.0 | 2026-11-21 | Audit Review Board | Independent schedules audit, multi-plot verification, 46 test assertions. |
-| 2.2.0 | 2026-11-23 | Audit Review Board | Comprehensive audit of Revised Free/Pro Model: verified 3-use combined monthly quota engine (`free_usage_counters`), WhatsApp click-to-chat integration (`wa.me`) with pre-created leads, plot registration restricted strictly to Pro subscribers, multi-actor plot editing permissions (with mandatory `audit_logs` and in-app notifications), and consolidated Primary Plot architecture (replacing Calling Plot). Expanded business rules to 58 (BR-01 to BR-58) and test cases to 54. Total 35 database tables. |
+| 2.2.0 | 2026-11-23 | Audit Review Board | Comprehensive audit of Revised Free/Pro Model: verified 3-use combined monthly quota engine (`free_usage_counters`), WhatsApp click-to-chat integration (`wa.me`) with pre-created leads, plot registration restricted strictly to Pro subscribers, multi-actor plot editing permissions (with mandatory `audit_logs` and in-app notifications), and consolidated Primary Plot architecture (replacing Calling Plot). Expanded business rules to 58 (BR-01 to BR-58) and test cases to 54. Total 48 database tables in 35 numbered groups. |
 
 This comprehensive review evaluates the completeness, technical accuracy, architectural feasibility, and cross-document consistency of the **Kisan Mitra AI (formerly DrakshGuru) Pre-Development Documentation Suite**. 
 
@@ -155,7 +155,7 @@ The matrix below provides complete forward and backward traceability for every P
 ## 5. Architectural & Security Consistency Verification
 
 ### 5.1 Technical Architecture Audit
-- **Consistency between Database & APIs:** All 35 tables documented in [02_TECHNICAL_ARCHITECTURE_KISAN_MITRA.md](file:///D:/Kisan%20Mitra%20App/docs/product-documentation/02_TECHNICAL_ARCHITECTURE_KISAN_MITRA.md) correspond directly to API endpoints and Pydantic schemas. Primary keys (`UUID`), foreign keys, and indexes are consistently modeled. Tables 30–35 (`schedule_configurations`, `schedule_events`, `farmer_calling_settings`, `daily_call_ledger`, `automated_call_logs`, `medicine_products`, `weather_alert_events`, `free_usage_counters`, `system_configurations`) seamlessly integrate with multi-plot management, independent schedules, the 1-call-per-day calling ledger, dynamic WhatsApp configuration, and the 3-use monthly free quota engine.
+- **Consistency between Database & APIs:** All 48 tables (35 numbered groups) documented in [02_TECHNICAL_ARCHITECTURE_KISAN_MITRA.md](file:///D:/Kisan%20Mitra%20App/docs/product-documentation/02_TECHNICAL_ARCHITECTURE_KISAN_MITRA.md) correspond directly to API endpoints and Pydantic schemas. Primary keys (`UUID`), foreign keys, and indexes are consistently modeled. Tables 30–35 (`schedule_configurations`, `schedule_events`, `farmer_calling_settings`, `daily_call_ledger`, `automated_call_logs`, `medicine_products`, `weather_alert_events`, `free_usage_counters`, `system_configurations`) seamlessly integrate with multi-plot management, independent schedules, the 1-call-per-day calling ledger, dynamic WhatsApp configuration, and the 3-use monthly free quota engine.
 - **pgvector Integration:** Embedding dimension is unified at 768 to match Google's `text-embedding-004` model. `HNSW` index parameters (`m=16, ef_construction=64`) provide sub-50ms query latencies under multi-thousand chunk loads. The `consultant_knowledge_documents` table maintains the same 768-dimensional embedding space and HNSW index configuration, ensuring consistent vector search performance across Master and Consultant KBs.
 - **Authoritative Supabase Platform:** All relational schemas, vector indexes, and media asset storage buckets (`crop-diagnostics`, `master-knowledge-docs`, `consultant-knowledge-docs`, `chat-media`, `schedule-files`) reside within Supabase, eliminating external synchronization drift.
 - **Independent Advisory Schedule Architecture & Safe 9-Step Ingestion:** Ingested schedules are stored as passive declarative database configuration rows (`schedule_configurations` and `schedule_events`). The 9-step pipeline enforces formula prefix neutralization (`=`, `+`, `-`, `@`), DAP sequence validation, and mandatory owner/admin review before runtime dynamic binding.
@@ -282,7 +282,7 @@ Before authorized engineering sprints begin, the Product Owner should review and
 │                                                                        │
 │   39 functional requirements (KM-FR-001 – KM-FR-039) fully traced.     │
 │   58 business rules (BR-01 – BR-58) verified PASS.                     │
-│   35 database tables fully specified with indexes & RLS policies.      │
+│   48 tables (35 groups) fully specified with indexes & RLS policies.   │
 │   28 engineering tickets across 14 post-MVP and core epics defined.    │
 │   23 detailed frontend screens specified with ASCII wireframes.        │
 │   54 core validation test cases covering free quota, WhatsApp lead,    │
