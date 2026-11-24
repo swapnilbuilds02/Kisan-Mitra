@@ -1,0 +1,102 @@
+{
+  "brand": "KISAN MITRA",
+  "parent_brand": "FORGE",
+  "colors": [
+    {
+      "name": "Deep Forest",
+      "role": "Primary",
+      "hex": "#174C38",
+      "rgb": [
+        23,
+        76,
+        56
+      ],
+      "cmyk": [
+        85,
+        38,
+        72,
+        48
+      ]
+    },
+    {
+      "name": "Agricultural Green",
+      "role": "Secondary",
+      "hex": "#34785A",
+      "rgb": [
+        52,
+        120,
+        90
+      ],
+      "cmyk": [
+        78,
+        25,
+        65,
+        14
+      ]
+    },
+    {
+      "name": "Harvest Gold",
+      "role": "Accent",
+      "hex": "#C5A451",
+      "rgb": [
+        197,
+        164,
+        81
+      ],
+      "cmyk": [
+        22,
+        32,
+        76,
+        4
+      ]
+    },
+    {
+      "name": "Warm Ivory",
+      "role": "Background",
+      "hex": "#F7F7F2",
+      "rgb": [
+        247,
+        247,
+        242
+      ],
+      "cmyk": [
+        3,
+        2,
+        5,
+        0
+      ]
+    },
+    {
+      "name": "Deep Charcoal",
+      "role": "Dark Neutral",
+      "hex": "#202923",
+      "rgb": [
+        32,
+        41,
+        35
+      ],
+      "cmyk": [
+        74,
+        60,
+        68,
+        70
+      ]
+    },
+    {
+      "name": "White",
+      "role": "Pure Ground / Reverse",
+      "hex": "#FFFFFF",
+      "rgb": [
+        255,
+        255,
+        255
+      ],
+      "cmyk": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}
