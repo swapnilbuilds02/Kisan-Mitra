@@ -18,7 +18,7 @@
 | 1.0.0 | 2026-11-19 | Principal Architect | Initial technical architecture & system specification. |
 | 2.0.0 | 2026-11-20 | Principal Architect | Manual payment model, WhatsApp enquiry flow, 1-year calendar validity engine. |
 | 2.1.0 | 2026-11-21 | Principal Architect | 34 database tables, multi-tenant isolation, independent schedules, IVR calling ledger. |
-| 2.2.0 | 2026-11-23 | Principal Architect | Revised Free/Pro model (3 combined uses/mo quota via `free_usage_counters`), WhatsApp click-to-chat integration (`wa.me`), plot registration gated strictly to Pro, multi-actor plot editing with audit logging and in-app notifications, consolidated Primary Plot architecture (replacing Calling Plot), dynamic owner WhatsApp configuration. Total 35 database tables. |
+| 2.2.0 | 2026-11-23 | Principal Architect | Revised Free/Pro model (3 combined uses/mo quota via `free_usage_counters`), WhatsApp click-to-chat integration (`wa.me`), plot registration gated strictly to Pro, multi-actor plot editing with audit logging and in-app notifications, consolidated Primary Plot architecture (replacing Calling Plot), dynamic owner WhatsApp configuration. Total 48 database tables in 35 numbered groups. |
 
 ### 1.1 Architectural Principles
 1. **Unified Core, Role-Partitioned Clients:** A single containerized Python FastAPI backend powers both the **Owner Web Dashboard** (Next.js/React) and the **Kisan Mitra Mobile Application** (React Native/Expo) with dynamic, authenticated role partitioning.
@@ -254,7 +254,7 @@ stateDiagram-v2
 
 ## 6. Comprehensive Database Architecture (PostgreSQL 16)
 
-The schema consists of 24 normalized, indexed, and constrained tables.
+The schema consists of 48 normalized, indexed, and constrained tables, documented in 35 numbered groups in Section 6.1 (several groups define more than one table). The diagram below shows the core entities only. Vector embeddings are stored in the `knowledge_chunks.embedding` column (`vector(768)`), not in a separate table.
 
 ```mermaid
 erDiagram
@@ -274,7 +274,6 @@ erDiagram
     SUBSCRIPTION_PLANS ||--o{ PLAN_ENTITLEMENTS : "specifies"
 
     KNOWLEDGE_DOCUMENTS ||--o{ KNOWLEDGE_CHUNKS : "segments"
-    KNOWLEDGE_CHUNKS ||--o{ CHUNK_EMBEDDINGS : "vectorizes"
 
     USERS ||--o{ AI_CONVERSATIONS : "initiates"
     AI_CONVERSATIONS ||--o{ AI_MESSAGES : "contains"
