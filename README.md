@@ -14,11 +14,11 @@ A Marathi-first agronomy platform for grape growers. Crop schedules, AI diagnosi
 
 <br />
 
-![Status](https://img.shields.io/badge/status-pre--alpha-C5A451?style=flat-square&labelColor=202923)
-![Backend](https://img.shields.io/badge/backend-FastAPI-34785A?style=flat-square&labelColor=202923)
-![Mobile](https://img.shields.io/badge/mobile-React%20Native-34785A?style=flat-square&labelColor=202923)
-![Data](https://img.shields.io/badge/data-Postgres%2016%20%2B%20pgvector-34785A?style=flat-square&labelColor=202923)
-![AI](https://img.shields.io/badge/AI-free%20tier%20only-34785A?style=flat-square&labelColor=202923)
+![Status](docs/assets/badges/status.svg)
+![Backend](docs/assets/badges/backend.svg)
+![Mobile](docs/assets/badges/mobile.svg)
+![Data](docs/assets/badges/data.svg)
+![AI](docs/assets/badges/ai.svg)
 
 [Overview](#overview) &nbsp;·&nbsp; [Features](#features) &nbsp;·&nbsp; [Architecture](#architecture) &nbsp;·&nbsp; [Status](#status) &nbsp;·&nbsp; [Getting started](#getting-started) &nbsp;·&nbsp; [Docs](#documentation)
 
@@ -245,11 +245,11 @@ Logos, app icons, favicons and print files live in [`brand/`](brand/). Usage rul
 
 | | Name | Hex | Role |
 | :---: | :--- | :--- | :--- |
-| ![](https://img.shields.io/badge/%20%20%20%20%20%20-174C38?style=flat-square) | Deep Forest | `#174C38` | Primary |
-| ![](https://img.shields.io/badge/%20%20%20%20%20%20-34785A?style=flat-square) | Agricultural Green | `#34785A` | Secondary |
-| ![](https://img.shields.io/badge/%20%20%20%20%20%20-C5A451?style=flat-square) | Harvest Gold | `#C5A451` | Accent, under 5% of any layout |
-| ![](https://img.shields.io/badge/%20%20%20%20%20%20-F7F7F2?style=flat-square) | Warm Ivory | `#F7F7F2` | Background |
-| ![](https://img.shields.io/badge/%20%20%20%20%20%20-202923?style=flat-square) | Deep Charcoal | `#202923` | Text and dark surfaces |
+| ![deep-forest](docs/assets/swatches/deep-forest.svg) | Deep Forest | `#174C38` | Primary |
+| ![agricultural-green](docs/assets/swatches/agricultural-green.svg) | Agricultural Green | `#34785A` | Secondary |
+| ![harvest-gold](docs/assets/swatches/harvest-gold.svg) | Harvest Gold | `#C5A451` | Accent, under 5% of any layout |
+| ![warm-ivory](docs/assets/swatches/warm-ivory.svg) | Warm Ivory | `#F7F7F2` | Background |
+| ![deep-charcoal](docs/assets/swatches/deep-charcoal.svg) | Deep Charcoal | `#202923` | Text and dark surfaces |
 
 Typeface: Inter.
 
