@@ -1,0 +1,1 @@
+No webfonts are shipped. The requested npm pack attempt failed with ENOTFOUND for registry.npmjs.org. The CSS uses the specified offline fallback stack. Add licensed latin and devanagari WOFF2 subsets (at most three files), unicode-range split and font-display: swap, when registry access is available. Do not hotlink fonts.
