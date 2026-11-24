@@ -241,7 +241,7 @@ Secrets are backend-only. Never commit `.env` and never ship a key to the mobile
 
 ## Brand
 
-Logos, app icons, favicons and print files live in [`brand/`](brand/). Usage rules are in [`brand/BRAND.md`](brand/BRAND.md).
+Kisan Mitra logos, app icons, favicons and print files live in [`brand/`](brand/). The FORGE endorsement logos are in [`brand/forge/`](brand/forge/). Usage rules are in [`brand/BRAND.md`](brand/BRAND.md).
 
 | | Name | Hex | Role |
 | :---: | :--- | :--- | :--- |
@@ -262,5 +262,12 @@ Proprietary and confidential. All rights reserved.
 <br />
 
 <div align="center">
-<sub>A PRODUCT OF FORGE</sub>
+
+<sub>A PRODUCT OF</sub>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="brand/forge/FORGE-horizontal-paper-on-ink.svg">
+  <img alt="FORGE" src="brand/forge/FORGE-horizontal.svg" width="84">
+</picture>
+
 </div>

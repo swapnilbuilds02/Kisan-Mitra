@@ -6,6 +6,7 @@ Official pack: KISAN-MITRA-BRAND/ (logos, symbol, app icons, favicons, print PDF
 - Kisan Mitra, by FORGE. Tagline: Your Trusted Farming Companion.
 - Positioning: Quiet Precision with Human Warmth.
 - Kisan Mitra is the hero. FORGE appears only as a smaller horizontal endorsement ("A PRODUCT OF" FORGE).
+- FORGE logo files: forge/ (use FORGE-horizontal.svg on light grounds and FORGE-horizontal-paper-on-ink.svg on dark). Use unmodified, always smaller than the Kisan Mitra logo.
 - Typeface: Inter (install via npm @fontsource/inter).
 
 ## Colours (KISAN-MITRA-BRAND/07-Brand-Colors/)
