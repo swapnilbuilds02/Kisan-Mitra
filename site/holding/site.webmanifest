@@ -8,7 +8,7 @@
   "theme_color": "#174C38",
   "background_color": "#174C38",
   "icons": [
-    { "src": "/assets/favicon-192x192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "/assets/favicon-512x512.png", "sizes": "512x512", "type": "image/png" }
+    { "src": "/assets/favicon-192x192.png?v=krushi-mitra-ai", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/favicon-512x512.png?v=krushi-mitra-ai", "sizes": "512x512", "type": "image/png" }
   ]
 }
