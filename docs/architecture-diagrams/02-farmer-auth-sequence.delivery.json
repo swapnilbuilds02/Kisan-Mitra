@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "50db79dd-3acc-40eb-9476-79e90425b264",
+  "status": "current",
+  "command": "deliver",
+  "type": "sequence",
+  "input": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\02-farmer-auth-sequence.json",
+  "output": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\02-farmer-auth-sequence.html",
+  "specification": {
+    "sha256": "3b5f280b15ec2f33d3b783914cc16caad85308e12982ee8b4cad68d4642eb159",
+    "bytes": 3112
+  },
+  "artifact": {
+    "sha256": "9b7160a269f8d0c8aa4554b6d1e2169edbd982efaccab15a5210d05e20eb859a",
+    "bytes": 932113
+  }
+}

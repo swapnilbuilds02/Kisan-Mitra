@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+"diagram_type": "architecture",
+    "layout": { "mode": "auto" },
+    "meta": {
+    "title": "Kisan Mitra — Complete Current System Architecture",
+    "subtitle": "Implemented vs planned components — Phase 1 (Foundation & Security Skeleton), in progress",
+    "output": "architecture-diagrams/01-current-system-architecture.html",
+    "quality_profile": "showcase",
+    "feedback_links": false,
+    "legend": {
+      "mode": "all",
+      "entries": {
+        "frontend": { "label": "Client (implemented source, unverified build)" },
+        "backend": { "label": "Backend FastAPI (implemented shell, unverified DB)" },
+        "database": { "label": "Database (migration SQL only, not applied)" },
+        "cloud": { "label": "Cloud / external (planned, not connected)" },
+        "security": { "label": "Security control (implemented code, unverified)" },
+        "external": { "label": "External provider (planned, not active)" }
+      }
+    }
+  },
+  "components": [
+    { "id": "mobile", "type": "frontend", "label": "Mobile App (Expo/React Native)", "sublabel": "Farmer · Shop · Consultant roles", "tag": "Implemented source · build unverified" },
+    { "id": "web", "type": "frontend", "label": "Owner Web Dashboard (Next.js)", "sublabel": "Super Admin / Platform Admin", "tag": "Implemented source · build unverified" },
+    { "id": "edge", "type": "cloud", "label": "Cloudflare Edge", "sublabel": "WAF · TLS · rate limiting", "tag": "Planned · not configured" },
+    { "id": "api", "type": "backend", "label": "FastAPI Backend", "sublabel": "Python 3.12 · app factory shell", "tag": "Implemented · DB routes unverified" },
+    { "id": "auth", "type": "security", "label": "RS256 JWT + Sessions", "sublabel": "Auth workflow · OTP · password · recovery", "tag": "Implemented · DB unverified" },
+    { "id": "db", "type": "database", "label": "PostgreSQL 16 + pgvector", "sublabel": "Supabase · Row Level Security", "tag": "Migration SQL only · not applied" },
+    { "id": "redis", "type": "database", "label": "Redis 7.2", "sublabel": "Cache · rate limits · sessions", "tag": "Planned · not connected" },
+    { "id": "storage", "type": "cloud", "label": "Supabase Storage", "sublabel": "Private files · signed URLs", "tag": "Planned · not wired" },
+    { "id": "gemini", "type": "external", "label": "Google Gemini (free tier)", "sublabel": "AI fallback · gated by kill switch", "tag": "Client helper only · no live calls" },
+    { "id": "weather", "type": "external", "label": "Weather (Open-Meteo / IMD)", "sublabel": "Plot-scoped context", "tag": "Returns unavailable · no provider" },
+    { "id": "sms", "type": "external", "label": "SMS / OTP (DLT)", "sublabel": "OTP delivery", "tag": "No sender configured" },
+    { "id": "ivr", "type": "external", "label": "IVR / Telephony", "sublabel": "1 call/day · Marathi", "tag": "Planned · not configured" },
+    { "id": "push", "type": "external", "label": "Firebase Cloud Messaging", "sublabel": "Push notifications", "tag": "Planned · not configured" }
+  ],
+  "boundaries": [
+    { "kind": "region", "label": "Clients", "wraps": ["mobile", "web"] },
+    { "kind": "region", "label": "Backend", "wraps": ["api", "auth"] },
+    { "kind": "region", "label": "Data Plane", "wraps": ["db", "redis", "storage"] },
+    { "kind": "region", "label": "External Providers", "wraps": ["gemini", "weather", "sms", "ivr", "push"] }
+  ],
+  "connections": [
+    { "id": "c1", "from": "mobile", "to": "edge", "label": "HTTPS / WSS", "variant": "emphasis" },
+    { "id": "c2", "from": "web", "to": "edge", "label": "HTTPS / WSS" },
+    { "id": "c3", "from": "edge", "to": "api", "label": "gateway", "variant": "security" },
+    { "id": "c4", "from": "api", "to": "auth", "label": "validate token", "variant": "dashed" },
+    { "id": "c5", "from": "api", "to": "db", "label": "queries · RLS", "variant": "dashed" },
+    { "id": "c6", "from": "api", "to": "redis", "label": "cache · rate limit", "variant": "dashed" },
+    { "id": "c7", "from": "api", "to": "storage", "label": "signed URLs", "variant": "dashed" },
+    { "id": "c8", "from": "api", "to": "gemini", "label": "AI fallback", "variant": "dashed" },
+    { "id": "c9", "from": "api", "to": "weather", "label": "plot context", "variant": "dashed" },
+    { "id": "c10", "from": "api", "to": "sms", "label": "OTP", "variant": "dashed" }
+  ],
+  "cards": [
+    { "dot": "emerald", "title": "Implemented (source present)", "items": ["FastAPI app factory · all auth routes", "RS256 JWT · kid-indexed public ring", "Farmer onboarding · partner · admin APIs", "Farmer plots + weather context (Stage 2A)", "Mobile auth client · auth screens", "Next.js owner auth (HttpOnly cookies, CSRF)"] },
+    { "dot": "amber", "title": "Implemented · unverified", "items": ["PostgreSQL migrations 0001–0009 (not applied)", "RLS policies (specified, not on real DB)", "Usage monitor (in-memory, not durable)", "AI router / Gemini client / image pipeline (helpers only)"] },
+    { "dot": "rose", "title": "Planned · not connected", "items": ["Gemini live calls · tier unverified (DEC-005)", "SMS / OTP sender · no provider", "Weather provider · returns unavailable", "Redis · Supabase Storage · IVR · push · edge"] }
+  ]
+}

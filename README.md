@@ -1,9 +1,6 @@
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="brand/KISAN-MITRA-BRAND/02-Logo-Variations/kisan-mitra-reverse-dark-transparent.svg">
-  <img alt="Kisan Mitra" src="brand/KISAN-MITRA-BRAND/01-Primary-Logo/kisan-mitra-primary-horizontal-transparent.svg" width="360">
-</picture>
+<img alt="Krushi Mitra AI" src="brand/KISAN-MITRA-BRAND/01-Primary-Logo/krushi-mitra-ai-primary.png" width="240">
 
 <br />
 <br />
@@ -131,6 +128,8 @@ flowchart LR
 
 **Pre-alpha.** The specification is complete. Implementation has started with the AI cost-control layer.
 
+The [implementation audit](docs/IMPLEMENTATION_AUDIT.md) distinguishes documented plans from verified code. Development should follow the [proposed phased roadmap](docs/PHASED_IMPLEMENTATION_ROADMAP.md) after owner approval; actual task history is in the [permanent Task Completion Log](docs/TASK_COMPLETION_LOG.md).
+
 Progress is tracked by task ID and status only, following the rules in the [development roadmap](docs/DEVELOPMENT_ROADMAP.md). No dates are promised.
 
 | Module | Tasks | Status |
@@ -225,6 +224,9 @@ Secrets are backend-only. Never commit `.env` and never ship a key to the mobile
 | [Feature tickets](docs/product-documentation/05_FEATURE_TICKET_LIST_KISAN_MITRA.md) | Engineering tickets and acceptance criteria |
 | [Documentation review](docs/product-documentation/KISAN_MITRA_DOCUMENTATION_FINAL_REVIEW.md) | Audit of the full documentation set |
 | [Development roadmap](docs/DEVELOPMENT_ROADMAP.md) | Modules, dependencies, verification |
+| [Implementation audit](docs/IMPLEMENTATION_AUDIT.md) | Code-verified status, four-role workflows, gaps and decisions |
+| [Phased implementation roadmap](docs/PHASED_IMPLEMENTATION_ROADMAP.md) | Prioritized step-by-step build and phase gates |
+| [Permanent Task Completion Log](docs/TASK_COMPLETION_LOG.md) | Completed, in-progress, pending and blocked task history |
 | [AI cost report](docs/AI_COST_OPTIMIZATION_REPORT.md) | Free-tier AI architecture and limits |
 
 <br />

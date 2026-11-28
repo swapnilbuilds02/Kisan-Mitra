@@ -1,5 +1,7 @@
 # Kisan Mitra holding page
 
+The header now uses the owner-supplied `assets/primary-logo.png` on a light surface. Favicons are derived from its leaf and AI emblem. The asset dimensions and visual checks recorded later in this file describe the original Kisan Mitra logo and favicons and need to be rerun if they are used as release criteria.
+
 Static, unreleased-product holding page for **https://kisanmitraa.online/** (two a's). No service is available yet. Plain HTML and one CSS file; no JavaScript, framework, build, form, analytics, or remote resources.
 
 ## Local preview
@@ -106,24 +108,4 @@ The requested single commit uses `feat(site): add kisanmitraa.online holding pag
 
 ## File inventory
 
-Sizes are raw bytes, not runtime transfer measurements. Documentation is not loaded by the page.
-
-| File (relative to site/holding) | Bytes |
-| --- | ---: |
-| `404.html` | 1297 |
-| `README.md` | 12924 |
-| `_headers` | 332 |
-| `assets/favicon-180x180.png` | 2676 |
-| `assets/favicon-192x192.png` | 2750 |
-| `assets/favicon-512x512.png` | 5194 |
-| `assets/favicon.ico` | 375 |
-| `assets/favicon.svg` | 962 |
-| `assets/fonts/README.md` | 325 |
-| `assets/forge-horizontal.svg` | 1365 |
-| `assets/kisan-mitra-reverse.svg` | 2395 |
-| `assets/og-image.png` | 25728 |
-| `index.html` | 5145 |
-| `robots.txt` | 72 |
-| `site.webmanifest` | 390 |
-| `sitemap.xml` | 162 |
-| `styles.css` | 3572 |
+The original byte inventory is obsolete after the logo and favicon replacement. Check current file sizes in `site/holding/assets/` before applying transfer budgets.

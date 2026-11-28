@@ -1,0 +1,22 @@
+{
+  "expo": {
+    "name": "Kisan Mitra",
+    "slug": "kisan-mitra",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F5F8F1"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-foreground.png",
+        "backgroundColor": "#183A29"
+      }
+    },
+    "ios": { "supportsTablet": true }
+  }
+}

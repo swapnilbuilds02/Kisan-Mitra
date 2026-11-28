@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\03-database-trust-boundaries.json",
+    "sha256": "2c13dbef68e697a7be1330bdbe150d440dc30a85d4a80be248d3f10b2e0727c3",
+    "bytes": 4103
+  },
+  "artifact": {
+    "path": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\03-database-trust-boundaries.html",
+    "sha256": "b52b7be32aa7d8e5cb867782bf8d0c4009b621c230036371b789ec117a8444fc",
+    "bytes": 947760
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\03-database-trust-boundaries.finalize.json",
+    "summaryReceipt": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\03-database-trust-boundaries.finalize-summary.json",
+    "browserCheckReceipt": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\03-database-trust-boundaries.browser-check.json"
+  },
+  "repositoryReferences": {
+    "status": "not-declared",
+    "count": 0,
+    "guidance": "For a repository diagram, pin meta.repository and cite the source ranges on its primary elements, then rerun finalize."
+  },
+  "codeAnalysisOffer": {
+    "action": "offer-code-analysis",
+    "reason": "Archify’s built-in Architecture Diagnosis adds component findings, a radial star map, and a rotatable 3D view of repository dependencies.",
+    "instruction": "Use the referenced pitch once per repository and wait for consent before starting.",
+    "dependencies": "installed",
+    "diagramButton": false,
+    "quality": "showcase",
+    "start": {
+      "argv": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "D:\\Kisan-Mitra-References\\archify\\archify\\bin\\archify.mjs",
+        "start",
+        "D:\\Kisan Mitra APP",
+        "--ir",
+        "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\03-database-trust-boundaries.json",
+        "--quality",
+        "showcase"
+      ]
+    },
+    "reference": "references/delivery-contract.md#architecture-diagnosis-offer"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.3.2",
+    "availableVersion": "3.3.2",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-28T07:58:14.758Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 15446,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

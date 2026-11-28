@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "lifecycle",
+  "quality": "showcase",
+  "specification": {
+    "path": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\04-partner-approval-lifecycle.json",
+    "sha256": "fcf4d517fec232e34c5438b42fca91bbf9204d6aefa5eed9c1de97c4e59497d9",
+    "bytes": 2467
+  },
+  "artifact": {
+    "path": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\04-partner-approval-lifecycle.html",
+    "sha256": "35b85f0f8942ee0dd60bb84475b9d0654d20b37f47b9a1ed37cee59030e2511c",
+    "bytes": 934619
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\04-partner-approval-lifecycle.finalize.json",
+    "summaryReceipt": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\04-partner-approval-lifecycle.finalize-summary.json",
+    "browserCheckReceipt": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\04-partner-approval-lifecycle.browser-check.json"
+  },
+  "repositoryReferences": {
+    "status": "not-declared",
+    "count": 0,
+    "guidance": "For a repository diagram, pin meta.repository and cite the source ranges on its primary elements, then rerun finalize."
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.3.2",
+    "availableVersion": "3.3.2",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-28T07:58:14.758Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 10864,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

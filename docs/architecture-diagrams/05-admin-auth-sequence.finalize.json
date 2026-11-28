@@ -1,0 +1,381 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "finalize",
+  "status": "fail",
+  "type": "sequence",
+  "quality": "showcase",
+  "startedAt": "2026-11-28T09:07:18.456Z",
+  "specification": {
+    "path": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\05-admin-auth-sequence.json",
+    "sha256": "75ed414667fc058cafb256bcda4a80a146f1a25d3c194eff48c2341b2564a8f8",
+    "bytes": 3638
+  },
+  "artifact": {
+    "path": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\05-admin-auth-sequence.html",
+    "sha256": "273440cc2d8a2474f48b134a255c42e9ceef906cd4d7b8c3f84a3acad48cb948",
+    "bytes": 934840
+  },
+  "stages": {
+    "validate": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": null,
+      "execution": "embedded-in-deliver",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "D:\\Kisan-Mitra-References\\archify\\archify\\bin\\archify.mjs",
+        "deliver",
+        "sequence",
+        "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\05-admin-auth-sequence.json",
+        "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\05-admin-auth-sequence.html",
+        "--quality",
+        "showcase",
+        "--repo-root",
+        "D:\\Kisan Mitra APP",
+        "--json"
+      ],
+      "receipt": {
+        "schemaVersion": 1,
+        "ok": true,
+        "command": "validate",
+        "specification": {
+          "sha256": "75ed414667fc058cafb256bcda4a80a146f1a25d3c194eff48c2341b2564a8f8",
+          "bytes": 3638
+        },
+        "validation": {
+          "checksPassed": 9,
+          "checkCount": 9,
+          "compositionProfile": "showcase",
+          "compositionStatus": "pass",
+          "errors": 0,
+          "warnings": 0
+        }
+      }
+    },
+    "deliver": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": 1716,
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "D:\\Kisan-Mitra-References\\archify\\archify\\bin\\archify.mjs",
+        "deliver",
+        "sequence",
+        "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\05-admin-auth-sequence.json",
+        "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\05-admin-auth-sequence.html",
+        "--quality",
+        "showcase",
+        "--repo-root",
+        "D:\\Kisan Mitra APP",
+        "--json"
+      ],
+      "receipt": {
+        "schemaVersion": 1,
+        "receiptId": "28762fb2-94d7-4c61-a6a5-0013a9af7952",
+        "ok": true,
+        "command": "deliver",
+        "type": "sequence",
+        "input": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\05-admin-auth-sequence.json",
+        "output": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\05-admin-auth-sequence.html",
+        "specification": {
+          "sha256": "75ed414667fc058cafb256bcda4a80a146f1a25d3c194eff48c2341b2564a8f8",
+          "bytes": 3638
+        },
+        "artifact": {
+          "sha256": "273440cc2d8a2474f48b134a255c42e9ceef906cd4d7b8c3f84a3acad48cb948",
+          "bytes": 934840
+        },
+        "validation": {
+          "checksPassed": 9,
+          "checkCount": 9,
+          "compositionProfile": "showcase",
+          "compositionStatus": "pass",
+          "errors": 0,
+          "warnings": 0
+        },
+        "update": {
+          "status": "unavailable",
+          "installedVersion": null,
+          "availableVersion": null,
+          "releaseNotes": null,
+          "checkedAt": null,
+          "source": null,
+          "noticeRequired": false,
+          "noticeText": null,
+          "reason": "disabled"
+        }
+      }
+    },
+    "check": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": 631,
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "D:\\Kisan-Mitra-References\\archify\\archify\\bin\\archify.mjs",
+        "check",
+        "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\05-admin-auth-sequence.html",
+        "--require-provenance"
+      ],
+      "receipt": {
+        "ok": true,
+        "file": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\05-admin-auth-sequence.html",
+        "artifact": {
+          "sha256": "273440cc2d8a2474f48b134a255c42e9ceef906cd4d7b8c3f84a3acad48cb948",
+          "bytes": 934840
+        },
+        "checks": [
+          {
+            "name": "single_svg",
+            "ok": true,
+            "details": [
+              "found 1 <svg> block(s)"
+            ]
+          },
+          {
+            "name": "finite_svg",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "orthogonal_arrows",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "label_route_clearance",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "relationship_crossings",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "relationship_corridors",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "container_border_runs",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "route_rhythm",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "legend_clearance",
+            "ok": true,
+            "details": []
+          }
+        ],
+        "composition": {
+          "schemaVersion": 1,
+          "profile": "showcase",
+          "status": "pass",
+          "summary": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "metrics": {
+            "properCrossings": 0,
+            "resolvedCrossovers": 0,
+            "ambiguousCorridors": 0,
+            "arrowheadCollisions": 0,
+            "containerBorderRuns": 0,
+            "labelRouteClearanceIssues": 0,
+            "labelCanvasOverflowIssues": 0,
+            "minLabelRouteClearance": 80,
+            "desktopReadabilityIssues": 0,
+            "viewportHeightIssues": 0,
+            "minProjectedNodeTextPx": 6,
+            "maxBends": 0,
+            "routesOverSuggestedBends": 0,
+            "maxStretch": 1,
+            "routesOverSuggestedStretch": 0,
+            "minSegmentPx": 189.8,
+            "minInteriorSegmentPx": null,
+            "shortSegmentCount": 0,
+            "shortEndpointSegmentCount": 0,
+            "shortInteriorSegmentCount": 0,
+            "microSegmentCount": 0
+          },
+          "suggestedLimits": {
+            "bendsPerRelationship": 2,
+            "stretch": 1.35,
+            "segmentPx": 16,
+            "microSegmentPx": 8
+          },
+          "routeReview": {
+            "crossings": [],
+            "detours": []
+          },
+          "leadingSpace": {
+            "measured": false,
+            "reviewSuggested": false
+          },
+          "sequenceColumnSpace": {
+            "measured": true,
+            "columnFit": "spread",
+            "participantCount": 5,
+            "occupiedRight": 1045,
+            "viewBoxLeft": 0,
+            "canvasWidth": 1085,
+            "emptyRightPx": 40,
+            "emptyRightRatio": 0.037,
+            "typicalParticipantWidth": 168,
+            "reviewSuggested": false
+          },
+          "desktopReadability": {
+            "budgetBasis": "legacy-930",
+            "readerContract": "declared-wide-v1",
+            "availableDiagramWidth": 930,
+            "actualBudgetPx": 930,
+            "limit": "legacy",
+            "requestedTargetPx": null,
+            "requestedTargetMet": null,
+            "hardFloorPx": 6,
+            "hardFloorMet": true,
+            "minimumOwner": {
+              "kind": "node",
+              "id": "operator"
+            },
+            "minimumSourceTextPx": 7,
+            "minimumProjectedTextPx": 6,
+            "semanticTextCount": 28
+          },
+          "issues": []
+        },
+        "provenance": "current",
+        "deliveryReceiptId": "28762fb2-94d7-4c61-a6a5-0013a9af7952"
+      }
+    },
+    "browser-check": {
+      "status": "fail",
+      "exitCode": 1,
+      "durationMs": 7952,
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "D:\\Kisan-Mitra-References\\archify\\archify\\bin\\archify.mjs",
+        "browser-check",
+        "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\05-admin-auth-sequence.html",
+        "--json",
+        "--require-provenance"
+      ],
+      "execution": "in-process",
+      "receipt": {
+        "schemaVersion": 1,
+        "ok": false,
+        "command": "browser-check",
+        "evidenceKind": "automated-browser",
+        "status": "fail",
+        "visualReview": "not-requested",
+        "provenance": "current",
+        "deliveryReceiptId": "28762fb2-94d7-4c61-a6a5-0013a9af7952",
+        "artifact": {
+          "path": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\05-admin-auth-sequence.html",
+          "sha256": "273440cc2d8a2474f48b134a255c42e9ceef906cd4d7b8c3f84a3acad48cb948",
+          "bytes": 934840
+        },
+        "state": {
+          "detail": "read",
+          "motion": "still"
+        },
+        "chrome": {
+          "status": "available",
+          "executable": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
+        },
+        "diagnostics": [
+          {
+            "code": "viewer/temp-cleanup-incomplete",
+            "severity": "error",
+            "message": "Browser cleanup could not safely finish; inspect the reported retained path.",
+            "subject": {
+              "artifact": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\05-admin-auth-sequence.html"
+            },
+            "evidence": {
+              "reason": "Chrome did not exit; retained temporary profile \"C:\\Users\\dell\\AppData\\Local\\Temp\\archify-visual-check-profile-wElX6W\".",
+              "retainedDirectory": "C:\\Users\\dell\\AppData\\Local\\Temp\\archify-visual-check-profile-wElX6W"
+            },
+            "supportedFixes": [
+              "resolve the reported process or filesystem failure; verify directory ownership before manual cleanup"
+            ]
+          }
+        ],
+        "containment": {
+          "status": "fail",
+          "policy": "fit-or-reader-declared-readable-vertical-scroll",
+          "viewports": []
+        },
+        "themeStates": {
+          "status": "fail",
+          "viewports": []
+        },
+        "readability": {
+          "status": "fail",
+          "minimumProjectedNodeTextPx": 6,
+          "viewports": []
+        },
+        "viewerChrome": {
+          "status": "fail",
+          "viewports": []
+        },
+        "captures": {
+          "status": "not-requested",
+          "screenshots": [],
+          "contactSheet": null
+        },
+        "sidecars": {
+          "receipt": "05-admin-auth-sequence.browser-check.json",
+          "files": []
+        },
+        "error": "Chrome did not exit; retained temporary profile \"C:\\Users\\dell\\AppData\\Local\\Temp\\archify-visual-check-profile-wElX6W\"."
+      }
+    }
+  },
+  "browserCheck": {
+    "requested": true,
+    "ran": false
+  },
+  "diagnostics": [
+    {
+      "code": "viewer/temp-cleanup-incomplete",
+      "severity": "error",
+      "message": "Browser cleanup could not safely finish; inspect the reported retained path.",
+      "subject": {
+        "artifact": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\05-admin-auth-sequence.html"
+      },
+      "evidence": {
+        "reason": "Chrome did not exit; retained temporary profile \"C:\\Users\\dell\\AppData\\Local\\Temp\\archify-visual-check-profile-wElX6W\".",
+        "retainedDirectory": "C:\\Users\\dell\\AppData\\Local\\Temp\\archify-visual-check-profile-wElX6W"
+      },
+      "supportedFixes": [
+        "resolve the reported process or filesystem failure; verify directory ownership before manual cleanup"
+      ]
+    }
+  ],
+  "evidence": {
+    "receipt": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\05-admin-auth-sequence.finalize.json",
+    "summaryReceipt": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\05-admin-auth-sequence.finalize-summary.json",
+    "browserCheckReceipt": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\05-admin-auth-sequence.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "failedStage": "browser-check",
+  "finishedAt": "2026-11-28T09:07:30.272Z",
+  "durationMs": 11816,
+  "update": {
+    "status": "current",
+    "installedVersion": "3.3.2",
+    "availableVersion": "3.3.2",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-28T07:58:14.758Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  }
+}

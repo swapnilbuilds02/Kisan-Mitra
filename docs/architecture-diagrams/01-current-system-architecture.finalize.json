@@ -1,0 +1,378 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "finalize",
+  "status": "fail",
+  "type": "architecture",
+  "quality": "showcase",
+  "startedAt": "2026-11-28T07:59:56.871Z",
+  "specification": {
+    "path": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\01-current-system-architecture.json",
+    "sha256": "a71d5ed22d35355dc24a87c9b9095d199b60d7d01bd3cf71382ea8970c35c9b7",
+    "bytes": 5269
+  },
+  "artifact": {
+    "path": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\01-current-system-architecture.html",
+    "sha256": "c748e0753f876c3a06f427fa9779a7074c584105d70945e065c56a196118ac3e",
+    "bytes": 957091
+  },
+  "stages": {
+    "validate": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": null,
+      "execution": "embedded-in-deliver",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "D:\\Kisan-Mitra-References\\archify\\archify\\bin\\archify.mjs",
+        "deliver",
+        "architecture",
+        "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\01-current-system-architecture.json",
+        "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\01-current-system-architecture.html",
+        "--quality",
+        "showcase",
+        "--repo-root",
+        "D:\\Kisan Mitra APP",
+        "--json"
+      ],
+      "receipt": {
+        "schemaVersion": 1,
+        "ok": true,
+        "command": "validate",
+        "specification": {
+          "sha256": "a71d5ed22d35355dc24a87c9b9095d199b60d7d01bd3cf71382ea8970c35c9b7",
+          "bytes": 5269
+        },
+        "validation": {
+          "checksPassed": 9,
+          "checkCount": 9,
+          "compositionProfile": "showcase",
+          "compositionStatus": "pass",
+          "errors": 0,
+          "warnings": 0
+        }
+      }
+    },
+    "deliver": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": 9562,
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "D:\\Kisan-Mitra-References\\archify\\archify\\bin\\archify.mjs",
+        "deliver",
+        "architecture",
+        "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\01-current-system-architecture.json",
+        "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\01-current-system-architecture.html",
+        "--quality",
+        "showcase",
+        "--repo-root",
+        "D:\\Kisan Mitra APP",
+        "--json"
+      ],
+      "receipt": {
+        "schemaVersion": 1,
+        "receiptId": "97ee56f5-b06e-4b9d-b3bb-35e7d90101f3",
+        "ok": true,
+        "command": "deliver",
+        "type": "architecture",
+        "input": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\01-current-system-architecture.json",
+        "output": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\01-current-system-architecture.html",
+        "specification": {
+          "sha256": "a71d5ed22d35355dc24a87c9b9095d199b60d7d01bd3cf71382ea8970c35c9b7",
+          "bytes": 5269
+        },
+        "artifact": {
+          "sha256": "c748e0753f876c3a06f427fa9779a7074c584105d70945e065c56a196118ac3e",
+          "bytes": 957091
+        },
+        "validation": {
+          "checksPassed": 9,
+          "checkCount": 9,
+          "compositionProfile": "showcase",
+          "compositionStatus": "pass",
+          "errors": 0,
+          "warnings": 0
+        },
+        "update": {
+          "status": "unavailable",
+          "installedVersion": null,
+          "availableVersion": null,
+          "releaseNotes": null,
+          "checkedAt": null,
+          "source": null,
+          "noticeRequired": false,
+          "noticeText": null,
+          "reason": "disabled"
+        }
+      }
+    },
+    "check": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": 1271,
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "D:\\Kisan-Mitra-References\\archify\\archify\\bin\\archify.mjs",
+        "check",
+        "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\01-current-system-architecture.html",
+        "--require-provenance"
+      ],
+      "receipt": {
+        "ok": true,
+        "file": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\01-current-system-architecture.html",
+        "artifact": {
+          "sha256": "c748e0753f876c3a06f427fa9779a7074c584105d70945e065c56a196118ac3e",
+          "bytes": 957091
+        },
+        "checks": [
+          {
+            "name": "single_svg",
+            "ok": true,
+            "details": [
+              "found 1 <svg> block(s)"
+            ]
+          },
+          {
+            "name": "finite_svg",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "orthogonal_arrows",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "label_route_clearance",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "relationship_crossings",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "relationship_corridors",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "container_border_runs",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "route_rhythm",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "legend_clearance",
+            "ok": true,
+            "details": []
+          }
+        ],
+        "composition": {
+          "schemaVersion": 1,
+          "profile": "showcase",
+          "status": "pass",
+          "summary": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "metrics": {
+            "properCrossings": 0,
+            "resolvedCrossovers": 0,
+            "ambiguousCorridors": 0,
+            "arrowheadCollisions": 0,
+            "containerBorderRuns": 0,
+            "labelRouteClearanceIssues": 0,
+            "labelCanvasOverflowIssues": 0,
+            "minLabelRouteClearance": 11.6,
+            "desktopReadabilityIssues": 0,
+            "viewportHeightIssues": 0,
+            "minProjectedNodeTextPx": 6.713216957605985,
+            "maxBends": 2,
+            "routesOverSuggestedBends": 0,
+            "maxStretch": 1,
+            "routesOverSuggestedStretch": 0,
+            "minSegmentPx": 8,
+            "minInteriorSegmentPx": 102.6,
+            "shortSegmentCount": 2,
+            "shortEndpointSegmentCount": 2,
+            "shortInteriorSegmentCount": 0,
+            "microSegmentCount": 0
+          },
+          "suggestedLimits": {
+            "bendsPerRelationship": 2,
+            "stretch": 1.35,
+            "segmentPx": 16,
+            "microSegmentPx": 8
+          },
+          "routeReview": {
+            "crossings": [],
+            "detours": []
+          },
+          "leadingSpace": {
+            "measured": true,
+            "emptyTopPx": 48,
+            "emptyTopRatio": 0.049,
+            "occupiedTop": 48,
+            "viewBoxTop": 0,
+            "canvasHeight": 984,
+            "typicalNodeHeight": 72,
+            "reviewSuggested": false
+          },
+          "desktopReadability": {
+            "budgetBasis": "recognized-declared-wide",
+            "readerContract": "declared-wide-v1",
+            "availableDiagramWidth": 1346,
+            "actualBudgetPx": 1346,
+            "actualReaderWidth": 1376,
+            "desiredReaderWidth": 1533.75,
+            "viewportCap": 1376,
+            "limit": "viewport-cap",
+            "requestedTargetPx": 7.5,
+            "requestedTargetMet": false,
+            "hardFloorPx": 6,
+            "hardFloorMet": true,
+            "minimumOwner": {
+              "kind": "node",
+              "id": "auth"
+            },
+            "minimumSourceTextPx": 10,
+            "minimumProjectedTextPx": 6.713216957605985,
+            "semanticTextCount": 40
+          },
+          "issues": []
+        },
+        "provenance": "current",
+        "deliveryReceiptId": "97ee56f5-b06e-4b9d-b3bb-35e7d90101f3"
+      }
+    },
+    "browser-check": {
+      "status": "fail",
+      "exitCode": 1,
+      "durationMs": 21109,
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "D:\\Kisan-Mitra-References\\archify\\archify\\bin\\archify.mjs",
+        "browser-check",
+        "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\01-current-system-architecture.html",
+        "--json",
+        "--require-provenance"
+      ],
+      "execution": "in-process",
+      "receipt": {
+        "schemaVersion": 1,
+        "ok": false,
+        "command": "browser-check",
+        "evidenceKind": "automated-browser",
+        "status": "fail",
+        "visualReview": "not-requested",
+        "provenance": "current",
+        "deliveryReceiptId": "97ee56f5-b06e-4b9d-b3bb-35e7d90101f3",
+        "artifact": {
+          "path": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\01-current-system-architecture.html",
+          "sha256": "c748e0753f876c3a06f427fa9779a7074c584105d70945e065c56a196118ac3e",
+          "bytes": 957091
+        },
+        "state": {
+          "detail": "read",
+          "motion": "still"
+        },
+        "chrome": {
+          "status": "available",
+          "executable": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
+        },
+        "diagnostics": [
+          {
+            "code": "viewer/temp-cleanup-incomplete",
+            "severity": "error",
+            "message": "Browser cleanup could not safely finish; inspect the reported retained path.",
+            "subject": {
+              "artifact": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\01-current-system-architecture.html"
+            },
+            "evidence": {
+              "reason": "Temporary directory cleanup failed; retained path \"C:\\Users\\dell\\AppData\\Local\\Temp\\archify-visual-check-profile-t2q4fW\": EPERM, Permission denied: \\\\?\\C:\\Users\\dell\\AppData\\Local\\Temp\\archify-visual-check-profile-t2q4fW '\\\\?\\C:\\Users\\dell\\AppData\\Local\\Temp\\archify-visual-check-profile-t2q4fW'",
+              "retainedDirectory": "C:\\Users\\dell\\AppData\\Local\\Temp\\archify-visual-check-profile-t2q4fW"
+            },
+            "supportedFixes": [
+              "resolve the reported process or filesystem failure; verify directory ownership before manual cleanup"
+            ]
+          }
+        ],
+        "containment": {
+          "status": "fail",
+          "policy": "fit-or-reader-declared-readable-vertical-scroll",
+          "viewports": []
+        },
+        "themeStates": {
+          "status": "fail",
+          "viewports": []
+        },
+        "readability": {
+          "status": "fail",
+          "minimumProjectedNodeTextPx": 6,
+          "viewports": []
+        },
+        "viewerChrome": {
+          "status": "fail",
+          "viewports": []
+        },
+        "captures": {
+          "status": "not-requested",
+          "screenshots": [],
+          "contactSheet": null
+        },
+        "sidecars": {
+          "receipt": "01-current-system-architecture.browser-check.json",
+          "files": []
+        },
+        "error": "Temporary directory cleanup failed; retained path \"C:\\Users\\dell\\AppData\\Local\\Temp\\archify-visual-check-profile-t2q4fW\": EPERM, Permission denied: \\\\?\\C:\\Users\\dell\\AppData\\Local\\Temp\\archify-visual-check-profile-t2q4fW '\\\\?\\C:\\Users\\dell\\AppData\\Local\\Temp\\archify-visual-check-profile-t2q4fW'"
+      }
+    }
+  },
+  "browserCheck": {
+    "requested": true,
+    "ran": false
+  },
+  "diagnostics": [
+    {
+      "code": "viewer/temp-cleanup-incomplete",
+      "severity": "error",
+      "message": "Browser cleanup could not safely finish; inspect the reported retained path.",
+      "subject": {
+        "artifact": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\01-current-system-architecture.html"
+      },
+      "evidence": {
+        "reason": "Temporary directory cleanup failed; retained path \"C:\\Users\\dell\\AppData\\Local\\Temp\\archify-visual-check-profile-t2q4fW\": EPERM, Permission denied: \\\\?\\C:\\Users\\dell\\AppData\\Local\\Temp\\archify-visual-check-profile-t2q4fW '\\\\?\\C:\\Users\\dell\\AppData\\Local\\Temp\\archify-visual-check-profile-t2q4fW'",
+        "retainedDirectory": "C:\\Users\\dell\\AppData\\Local\\Temp\\archify-visual-check-profile-t2q4fW"
+      },
+      "supportedFixes": [
+        "resolve the reported process or filesystem failure; verify directory ownership before manual cleanup"
+      ]
+    }
+  ],
+  "evidence": {
+    "receipt": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\01-current-system-architecture.finalize.json",
+    "summaryReceipt": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\01-current-system-architecture.finalize-summary.json",
+    "browserCheckReceipt": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\01-current-system-architecture.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "failedStage": "browser-check",
+  "finishedAt": "2026-11-28T08:00:34.052Z",
+  "durationMs": 37180,
+  "update": {
+    "status": "current",
+    "installedVersion": "3.3.2",
+    "availableVersion": "3.3.2",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-28T07:58:14.758Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  }
+}

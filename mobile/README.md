@@ -1,0 +1,11 @@
+# Kisan Mitra mobile authentication source
+
+The existing Expo app now has Marathi/English language selection, password and OTP login, reset, Farmer onboarding, Shop/Consultant application forms, pending status, and role-specific empty states. It uses the supplied app icon and `expo-secure-store` for the refresh token. Access tokens stay in memory. A single refresh promise coordinates requests in one app process; revoked sessions clear local credentials. Admin accounts are refused in the mobile client.
+
+Copy `.env.example` to `.env.local` and set `EXPO_PUBLIC_API_URL` to the backend address. Outside local development it must use HTTPS. Registration remains unavailable until an approved service/privacy document has a matching backend ID/version and an HTTPS document URL in the three consent variables. The app never supplies placeholder consent text or a default password. Mobile number ownership and identity claiming are decided by the backend, without revealing whether an account exists at OTP request time.
+
+From `mobile/`: `npm install`, `npm run typecheck`, `npx expo config --type public`, then `npm start` for device testing. No live OTP sender is configured. Pending partners see only application status; approved partners must sign in again. Rejected/suspended status details remain unavailable under the current backend policy, so the app shows a session/entry restriction rather than privileged data. Full Farmer/partner dashboards, device accessibility checks, and native builds remain later work.
+
+Local verification on 2026-11-27 could not install packages: npm registry HTTPS returned `EACCES`; `npm run typecheck` could not find `tsc`. The UI and secure storage behavior are **not build- or device-verified**.
+
+Stage 2A adds a Farmer-only plot manager inside the existing authenticated home view. It calls the backend to create, list, edit, select, archive, and request plot-specific weather context. Coordinates are optional and require a checked Farmer permission control. Weather shows the backend's `unavailable` or `stale` state; the app does not invent a forecast. The source remains untypechecked and untested on a device while npm access is blocked. See [Stage 2A](../docs/STAGE2A_PLOTS_WEATHER.md).

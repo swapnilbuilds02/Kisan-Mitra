@@ -1,0 +1,36 @@
+{
+  "schema_version": 3,
+  "diagram_type": "lifecycle",
+  "meta": {
+    "title": "Kisan Mitra — Shop & Consultant Approval Lifecycle",
+    "subtitle": "Partner registration → pending approval → admin decision → active/suspended/reactivated",
+    "output": "architecture-diagrams/04-partner-approval-lifecycle.html",
+    "quality_profile": "showcase",
+    "feedback_links": false
+  },
+  "mainPath": ["register", "pending", "review", "approved"],
+  "states": [
+    { "id": "register", "type": "start", "label": "Register", "sublabel": "Mobile app · OTP" },
+    { "id": "pending", "type": "waiting", "label": "Pending Approval", "sublabel": "Restricted session only" },
+    { "id": "review", "type": "decision", "label": "Admin Review", "sublabel": "Owner dashboard" },
+    { "id": "approved", "type": "success", "label": "Approved", "sublabel": "Provisioned credentials" },
+    { "id": "rejected", "type": "failure", "label": "Rejected", "sublabel": "No automatic resubmission path" },
+    { "id": "suspended", "type": "waiting", "label": "Suspended", "sublabel": "Session revoked · access denied" },
+    { "id": "reactivated", "type": "active", "label": "Reactivated", "sublabel": "Admin decision · session restored" }
+  ],
+  "transitions": [
+    { "from": "register", "to": "pending", "label": "OTP verified · application created" },
+    { "from": "pending", "to": "review", "label": "Admin opens application" },
+    { "from": "review", "to": "approved", "label": "Approve" },
+    { "from": "review", "to": "rejected", "label": "Reject" },
+    { "from": "review", "to": "suspended", "label": "Suspend" },
+    { "from": "suspended", "to": "reactivated", "label": "Reactivate" },
+    { "from": "reactivated", "to": "pending", "label": "Return to pending scope" },
+    { "from": "approved", "to": "suspended", "label": "Suspend" }
+  ],
+  "cards": [
+    { "dot": "emerald", "title": "Implemented (source)", "items": ["Partner registration · OTP binding", "Restricted pending session", "Admin approve/reject/suspend/reactivate", "Session revocation on decision", "Migration 0007 partner_applications"] },
+    { "dot": "rose", "title": "Unverified", "items": ["PostgreSQL migration not executed", "RLS / restricted-role behavior untested", "Concurrent decisions not verified", "Frontend not built"] },
+    { "dot": "amber", "title": "Pending decision", "items": ["DEC-003 Delegated Admin permission matrix", "DEC-CONSENT-001 Consent document wording"] }
+  ]
+}

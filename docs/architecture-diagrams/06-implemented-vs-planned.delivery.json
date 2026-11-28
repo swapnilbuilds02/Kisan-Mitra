@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "4964785d-e128-49ff-8161-9854b508ffeb",
+  "status": "current",
+  "command": "deliver",
+  "type": "tree",
+  "input": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\06-implemented-vs-planned.json",
+  "output": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\06-implemented-vs-planned.html",
+  "specification": {
+    "sha256": "ca04a50df87ce96fcf392083fae8e5e7696d4f0cac9ce6a4a805bc92eafcc064",
+    "bytes": 3225
+  },
+  "artifact": {
+    "sha256": "9bf6580b821d16f52f230393bbfa27b6f12f7d8292730f0116669d345029193f",
+    "bytes": 954553
+  }
+}

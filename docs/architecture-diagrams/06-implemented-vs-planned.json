@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "diagram_type": "tree",
+  "meta": {
+    "title": "Kisan Mitra — Implemented vs Planned Components",
+    "subtitle": "Component status across backend, mobile, web, database, AI — Phase 1 in progress",
+    "output": "architecture-diagrams/06-implemented-vs-planned.html",
+    "quality_profile": "showcase",
+    "feedback_links": false
+  },
+  "nodes": [
+    { "id": "root", "label": "Kisan Mitra Platform", "sublabel": "Phase 1 · ~86% source · ~22% overall (estimate)" },
+    { "id": "backend", "label": "Backend (FastAPI)", "sublabel": "API shell implemented · DB unverified", "parent": "root", "change": "modified" },
+    { "id": "auth", "label": "Auth · sessions · OTP", "sublabel": "RS256 JWT · password · recovery", "parent": "backend", "change": "added" },
+    { "id": "onboarding", "label": "Farmer onboarding", "sublabel": "Consent · profile · password enrollment", "parent": "backend", "change": "added" },
+    { "id": "partners", "label": "Shop/Consultant", "sublabel": "Registration · approval · decisions", "parent": "backend", "change": "added" },
+    { "id": "admin", "label": "Admin provisioning", "sublabel": "Activation · reauth · counters", "parent": "backend", "change": "added" },
+    { "id": "plots", "label": "Farmer plots + weather", "sublabel": "Stage 2A source · DB unverified", "parent": "backend", "change": "modified" },
+    { "id": "ai-services", "label": "AI helpers", "sublabel": "Router · Gemini client · image · usage", "parent": "backend", "change": "modified" },
+    { "id": "mobile", "label": "Mobile (Expo/React Native)", "sublabel": "Auth client · screens · plot manager", "parent": "root", "change": "modified" },
+    { "id": "web", "label": "Owner Web (Next.js)", "sublabel": "Server auth · partner decisions", "parent": "root", "change": "modified" },
+    { "id": "database", "label": "Database (PostgreSQL 16)", "sublabel": "Migrations 0001–0009 · not applied", "parent": "root", "change": "added" },
+    { "id": "ai-rag", "label": "RAG engine · safety arbiter", "sublabel": "Knowledge ingestion · citations", "parent": "root", "change": "added" },
+    { "id": "integrations", "label": "External integrations", "sublabel": "Gemini · SMS · weather · IVR · push", "parent": "root", "change": "added" },
+    { "id": "phase2", "label": "Phase 2–7 (pending)", "sublabel": "Free loop · partner governance · RAG · release", "parent": "root", "change": "added" }
+  ],
+  "cards": [
+    { "dot": "emerald", "title": "Implemented & locally tested", "items": ["138 Python tests pass · 0 failed", "RS256 JWT contract", "All auth routes (source)"] },
+    { "dot": "amber", "title": "Implemented · unverified", "items": ["Database migrations (not applied)", "RLS policies (not on real DB)", "Frontend builds (npm blocked)", "Mobile type checks (no node_modules)"] },
+    { "dot": "rose", "title": "Planned · not started", "items": ["RAG engine · safety arbiter", "Knowledge ingestion (16-step)", "Gemini live calls (DEC-005)", "Phases 2–7 features"] },
+    { "dot": "slate", "title": "Blocked", "items": ["Git writes (.git/index.lock)", "GitHub connectivity (port 443)", "PostgreSQL server/driver", "npm registry access"] }
+  ]
+}

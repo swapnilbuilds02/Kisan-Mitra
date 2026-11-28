@@ -1,7 +1,10 @@
 # Secrets – never commit
 .env
 *.env
+.env.*
+**/.env.*
 !.env.example
+!**/.env.example
 
 # Python
 __pycache__/
@@ -14,6 +17,9 @@ venv/
 # Node / React Native
 node_modules/
 expo/
+.expo/
+.next/
+*.tsbuildinfo
 *.log
 npm-debug.log*
 
@@ -26,3 +32,32 @@ Thumbs.db
 # Builds
 dist/
 build/
+
+# Recovery evidence and independent backup copies (never application source)
+/RECOVERY_WORKSPACE/
+/Kisan-Mitra-Recovery*/
+/Kisan-Mitra-*-Backup-*/
+/Kisan-Mitra-Final-Recovery-*/
+
+# Local credentials and signing material
+*.pem
+!**/public.pem
+!**/*.pub.pem
+!**/*-public.pem
+!**/*_public.pem
+*.key
+*.p12
+*.pfx
+
+# Local databases, dumps, coverage, and generated test output
+*.dump
+*.sql.gz
+*.sqlite
+*.sqlite3
+*.db
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.mypy_cache/
+.ruff_cache/

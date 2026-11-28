@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "sequence",
+  "quality": "showcase",
+  "specification": {
+    "path": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\02-farmer-auth-sequence.json",
+    "sha256": "3b5f280b15ec2f33d3b783914cc16caad85308e12982ee8b4cad68d4642eb159",
+    "bytes": 3112
+  },
+  "artifact": {
+    "path": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\02-farmer-auth-sequence.html",
+    "sha256": "9b7160a269f8d0c8aa4554b6d1e2169edbd982efaccab15a5210d05e20eb859a",
+    "bytes": 932113
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\02-farmer-auth-sequence.finalize.json",
+    "summaryReceipt": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\02-farmer-auth-sequence.finalize-summary.json",
+    "browserCheckReceipt": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\02-farmer-auth-sequence.browser-check.json"
+  },
+  "repositoryReferences": {
+    "status": "not-declared",
+    "count": 0,
+    "guidance": "For a repository diagram, pin meta.repository and cite the source ranges on its primary elements, then rerun finalize."
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.3.2",
+    "availableVersion": "3.3.2",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-28T07:58:14.758Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 7470,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

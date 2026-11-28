@@ -1,6 +1,8 @@
 # Kisan Mitra brand rules
 
-Official pack: KISAN-MITRA-BRAND/ (logos, symbol, app icons, favicons, print PDFs, colours, guidelines PDF). Do not edit those files.
+Primary logo: `KISAN-MITRA-BRAND/01-Primary-Logo/krushi-mitra-ai-primary.png`, supplied by the project owner. That folder also contains PNG sizes, an SVG wrapper, and a PDF copy. The SVG and PDF embed the raster artwork; they are not true vector originals. `02-Logo-Variations` contains light and dark background versions, `03-Standalone-Symbol` contains the leaf and AI emblem cropped from the supplied artwork, and `05-Favicon` contains icons derived from that emblem. `04-App-Icons` contains the separately supplied grape emblem for app icons and splash assets. Print assets and the guidelines PDF remain from the previous pack.
+
+The supplied artwork reads “Krushi Mitra AI.” The repository and product copy still use “Kisan Mitra”; the logo change does not rename the product.
 
 ## Identity
 - Kisan Mitra, by FORGE. Tagline: Your Trusted Farming Companion.
@@ -18,16 +20,16 @@ Official pack: KISAN-MITRA-BRAND/ (logos, symbol, app icons, favicons, print PDF
 - White #FFFFFF: cards and reverse.
 
 ## Logo usage
-- Clear space: at least 0.5x the symbol height on all sides.
-- Minimum size: horizontal lockup 120 px wide (digital) or 28 mm (print). Symbol 16 x 16 px.
-- Never alter stroke ratios, recolour individual letters, add shadows or gradients, rotate the symbol, or put text inside the app icon.
-- Use the approved files only. Never redraw or replace the logo.
+- Keep clear space around the square logo and avoid cropping it.
+- Display the full logo at least 160 px wide in digital layouts so its lettering remains legible.
+- Do not distort, recolour, or redraw the supplied artwork.
+- Use the new `01-Primary-Logo` artwork as the primary logo. Its dark green lettering needs a light background.
 
 ## Where each asset goes
-- App icon: 04-App-Icons (iOS master 1024, Android master and adaptive foreground).
-- Splash: 04-App-Icons/kisan-mitra-splash-screen-logo-*.
-- Web favicon: 05-Favicon.
-- In-app header logo: 01-Primary-Logo SVG or 03-Standalone-Symbol SVG.
+- App icon: `04-App-Icons/krushi-mitra-ai-app-icon.png` is the supplied source. Use the iOS and Android 1024-pixel masters as appropriate. Android adaptive icons use the transparent foreground with the matching dark background.
+- Splash: `04-App-Icons/krushi-mitra-ai-splash-*`.
+- Web favicon: 05-Favicon, also copied to `site/holding/assets/`.
+- In-app header logo: `01-Primary-Logo/krushi-mitra-ai-primary.png` on a light surface.
 
 ## Photography
 - Authentic documentary imagery of Maharashtra grape growers. No stock or fashion look. No generated people or hands.

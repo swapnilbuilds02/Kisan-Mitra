@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "diagram_type": "sequence",
+  "meta": {
+    "title": "Kisan Mitra — Farmer Authentication & Account Claim",
+    "subtitle": "OTP / password login, onboarding, and pending Pro invitation claim",
+    "output": "architecture-diagrams/02-farmer-auth-sequence.html",
+    "quality_profile": "showcase",
+    "feedback_links": false,
+    "column_fit": "spread"
+  },
+  "participants": [
+    { "id": "farmer", "type": "frontend", "label": "Farmer", "sublabel": "Mobile app" },
+    { "id": "api", "type": "backend", "label": "FastAPI Backend", "sublabel": "auth workflow" },
+    { "id": "otp", "type": "external", "label": "OTP Provider", "sublabel": "interface · no live sender" },
+    { "id": "db", "type": "database", "label": "PostgreSQL", "sublabel": "migration 0001–0006 · unverified" },
+    { "id": "pending", "type": "backend", "label": "Pending Pro Invitation", "sublabel": "migration 0005 · unverified" }
+  ],
+  "messages": [
+    { "id": "m1", "from": "farmer", "to": "api", "y": 160, "label": "Enter mobile number · choose password or OTP", "variant": "default" },
+    { "id": "m2", "from": "api", "to": "otp", "y": 260, "label": "Request OTP (LOGIN / REGISTRATION / ACCOUNT_CLAIM)", "variant": "default" },
+    { "id": "m3", "from": "otp", "to": "farmer", "y": 360, "label": "6-digit code (SMS — not configured)", "variant": "dashed", "note": "No live OTP sender configured" },
+    { "id": "m4", "from": "farmer", "to": "api", "y": 460, "label": "Submit OTP code", "variant": "default" },
+    { "id": "m5", "from": "api", "to": "db", "y": 560, "label": "Verify OTP · claim identity (row lock)", "variant": "default" },
+    { "id": "m6", "from": "db", "to": "pending", "y": 660, "label": "Check pending_pro_activations", "variant": "dashed" },
+    { "id": "m7", "from": "pending", "to": "db", "y": 760, "label": "Return invitation (if any)", "variant": "dashed" },
+    { "id": "m8", "from": "db", "to": "api", "y": 860, "label": "Return actor (role, state, tier)", "variant": "dashed" },
+    { "id": "m9", "from": "api", "to": "farmer", "y": 960, "label": "JWT access (15 min) + refresh token", "variant": "emphasis" },
+    { "id": "m10", "from": "farmer", "to": "api", "y": 1060, "label": "Complete onboarding: profile + consent + password", "variant": "default" },
+    { "id": "m11", "from": "api", "to": "db", "y": 1160, "label": "Create credential · profile · consent · activate (atomic)", "variant": "default" },
+    { "id": "m12", "from": "db", "to": "api", "y": 1260, "label": "Farmer ID + activated state", "variant": "dashed" },
+    { "id": "m13", "from": "api", "to": "farmer", "y": 1360, "label": "Session issued · role routing", "variant": "emphasis" }
+  ],
+  "cards": [
+    { "dot": "emerald", "title": "Implemented (source)", "items": ["OTP request/verify endpoints", "Password login / recovery / change", "Farmer onboarding with consent", "RS256 JWT issue/verify"] },
+    { "dot": "rose", "title": "Unverified / pending", "items": ["Database migration not executed", "No live OTP sender", "Consent document not seeded", "Frontend builds not run"] }
+  ]
+}

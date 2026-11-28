@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "94f8a1e4-0cb0-4df2-9083-0c5fcd75530c",
+  "status": "current",
+  "command": "deliver",
+  "type": "lifecycle",
+  "input": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\04-partner-approval-lifecycle.json",
+  "output": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\04-partner-approval-lifecycle.html",
+  "specification": {
+    "sha256": "fcf4d517fec232e34c5438b42fca91bbf9204d6aefa5eed9c1de97c4e59497d9",
+    "bytes": 2467
+  },
+  "artifact": {
+    "sha256": "35b85f0f8942ee0dd60bb84475b9d0654d20b37f47b9a1ed37cee59030e2511c",
+    "bytes": 934619
+  }
+}

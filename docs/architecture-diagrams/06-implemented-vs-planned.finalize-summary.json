@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "tree",
+  "quality": "showcase",
+  "specification": {
+    "path": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\06-implemented-vs-planned.json",
+    "sha256": "ca04a50df87ce96fcf392083fae8e5e7696d4f0cac9ce6a4a805bc92eafcc064",
+    "bytes": 3225
+  },
+  "artifact": {
+    "path": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\06-implemented-vs-planned.html",
+    "sha256": "9bf6580b821d16f52f230393bbfa27b6f12f7d8292730f0116669d345029193f",
+    "bytes": 954553
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\06-implemented-vs-planned.finalize.json",
+    "summaryReceipt": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\06-implemented-vs-planned.finalize-summary.json",
+    "browserCheckReceipt": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\06-implemented-vs-planned.browser-check.json"
+  },
+  "repositoryReferences": {
+    "status": "not-declared",
+    "count": 0,
+    "guidance": "For a repository diagram, pin meta.repository and cite the source ranges on its primary elements, then rerun finalize."
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.3.2",
+    "availableVersion": "3.3.2",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-28T07:58:14.758Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 11316,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

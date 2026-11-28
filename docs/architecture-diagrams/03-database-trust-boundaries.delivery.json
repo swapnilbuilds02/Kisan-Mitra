@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "a5364393-5d65-41c3-a7cf-8a40b6c04f25",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\03-database-trust-boundaries.json",
+  "output": "D:\\Kisan Mitra APP\\docs\\architecture-diagrams\\03-database-trust-boundaries.html",
+  "specification": {
+    "sha256": "2c13dbef68e697a7be1330bdbe150d440dc30a85d4a80be248d3f10b2e0727c3",
+    "bytes": 4103
+  },
+  "artifact": {
+    "sha256": "b52b7be32aa7d8e5cb867782bf8d0c4009b621c230036371b789ec117a8444fc",
+    "bytes": 947760
+  }
+}

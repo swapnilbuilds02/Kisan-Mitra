@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "diagram_type": "sequence",
+  "meta": {
+    "title": "Kisan Mitra — Admin Authentication & Authorization",
+    "subtitle": "Migration-owner preparation → OTP activation → protected decisions with reauth",
+    "output": "architecture-diagrams/05-admin-auth-sequence.html",
+    "quality_profile": "showcase",
+    "feedback_links": false,
+    "column_fit": "spread"
+  },
+  "participants": [
+    { "id": "operator", "type": "frontend", "label": "Operator", "sublabel": "migration-owner command line" },
+    { "id": "admin", "type": "frontend", "label": "Admin", "sublabel": "web dashboard · Next.js" },
+    { "id": "api", "type": "backend", "label": "FastAPI Backend", "sublabel": "admin provisioning · auth" },
+    { "id": "otp", "type": "external", "label": "OTP Provider", "sublabel": "ACCOUNT_CLAIM / LOGIN · no live sender" },
+    { "id": "db", "type": "database", "label": "PostgreSQL", "sublabel": "migration 0008 · unverified" }
+  ],
+  "messages": [
+    { "id": "m1", "from": "operator", "to": "api", "y": 160, "label": "prepare_admin --bootstrap-owner --mobile <number>", "variant": "default" },
+    { "id": "m2", "from": "api", "to": "db", "y": 260, "label": "Create inactive unverified identity (no password, no session)", "variant": "default" },
+    { "id": "m3", "from": "db", "to": "api", "y": 360, "label": "Identity prepared", "variant": "dashed" },
+    { "id": "m4", "from": "admin", "to": "api", "y": 460, "label": "Activate request (mobile)", "variant": "default" },
+    { "id": "m5", "from": "api", "to": "otp", "y": 560, "label": "Request ACCOUNT_CLAIM OTP", "variant": "default" },
+    { "id": "m6", "from": "otp", "to": "admin", "y": 660, "label": "6-digit code (SMS — not configured)", "variant": "dashed", "note": "No live OTP sender configured" },
+    { "id": "m7", "from": "admin", "to": "api", "y": 760, "label": "Verify OTP + password", "variant": "default" },
+    { "id": "m8", "from": "api", "to": "db", "y": 860, "label": "Create scrypt credential · activate identity (atomic)", "variant": "default" },
+    { "id": "m9", "from": "db", "to": "api", "y": 960, "label": "Admin activated", "variant": "dashed" },
+    { "id": "m10", "from": "admin", "to": "api", "y": 1060, "label": "Password login + JWT", "variant": "default" },
+    { "id": "m11", "from": "api", "to": "db", "y": 1160, "label": "Verify credential · active provisioning record", "variant": "default" },
+    { "id": "m12", "from": "db", "to": "api", "y": 1260, "label": "Return JWT pair", "variant": "dashed" },
+    { "id": "m13", "from": "admin", "to": "api", "y": 1360, "label": "Sensitive decision (partner approve)", "variant": "default" },
+    { "id": "m14", "from": "api", "to": "admin", "y": 1460, "label": "Require X-Admin-Reauth proof (5-min RS256)", "variant": "dashed" },
+    { "id": "m15", "from": "admin", "to": "api", "y": 1560, "label": "Password proof + reauth token", "variant": "default" },
+    { "id": "m16", "from": "api", "to": "db", "y": 1660, "label": "Verify provisioning active · decision audit", "variant": "default" },
+    { "id": "m17", "from": "db", "to": "api", "y": 1760, "label": "Decision recorded", "variant": "dashed" }
+  ],
+  "cards": [
+    { "dot": "emerald", "title": "Implemented (source)", "items": ["Admin preparation (migration-owner only)", "OTP activation flow", "Password login + JWT", "Reauthentication for sensitive decisions", "Migration 0008 admin counters"] },
+    { "dot": "rose", "title": "Unverified / pending", "items": ["Database not executed", "No live OTP sender", "Owner identity not provisioned", "Stronger Admin factors not implemented"] }
+  ]
+}

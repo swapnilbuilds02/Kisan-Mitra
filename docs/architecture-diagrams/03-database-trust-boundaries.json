@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+"diagram_type": "architecture",
+    "layout": { "mode": "auto" },
+    "meta": {
+    "title": "Kisan Mitra — Database Trust Boundaries & Tenant Isolation",
+    "subtitle": "PostgreSQL RLS design — specified, not yet applied to a real database",
+    "output": "architecture-diagrams/03-database-trust-boundaries.html",
+    "quality_profile": "showcase",
+    "feedback_links": false,
+    "legend": {
+      "mode": "all",
+      "entries": {
+        "security": { "label": "RLS policy (specified · unverified)" },
+        "backend": { "label": "Backend function (code · DB-unverified)" },
+        "database": { "label": "Table (migration SQL · not applied)" },
+        "external": { "label": "API credential (trust boundary concern)" }
+      }
+    }
+  },
+  "components": [
+    { "id": "km-api", "type": "external", "label": "km_api database role", "sublabel": "API runtime credential", "tag": "TRUST BOUNDARY — theft bypasses API ownership" },
+    { "id": "api-layer", "type": "backend", "label": "FastAPI Application Layer", "sublabel": "Server-side actor lookup · role/tier from DB", "tag": "Implemented code · unverified" },
+    { "id": "sec-def", "type": "security", "label": "SECURITY DEFINER functions", "sublabel": "Narrow migration-owned transitions", "tag": "Code written · not applied" },
+    { "id": "rls", "type": "security", "label": "Row Level Security (RLS)", "sublabel": "Deny-by-default on sensitive tables", "tag": "Specified in doc · not applied" },
+    { "id": "tables", "type": "database", "label": "Sensitive Tables", "sublabel": "farms, plots, subscriptions, relationships", "tag": "Migration SQL only" },
+    { "id": "farmer-rls", "type": "security", "label": "Farmer Isolation Policy", "sublabel": "user_id = current user ID", "tag": "Specified · unverified" },
+    { "id": "plot-rls", "type": "security", "label": "Multi-Actor Plot Policy", "sublabel": "Farmer · shop/consultant · admin", "tag": "Specified · unverified" },
+    { "id": "rel-rls", "type": "security", "label": "Relationship Isolation", "sublabel": "Shop A cannot see Shop B's farmers", "tag": "Specified · unverified" },
+    { "id": "kv-rls", "type": "security", "label": "AI Visibility Consent Policy", "sublabel": "Read-only for partners with farmer consent", "tag": "Specified · unverified" }
+  ],
+  "boundaries": [
+    { "kind": "security-group", "label": "API Trust Boundary", "wraps": ["km-api", "api-layer", "sec-def"] },
+    { "kind": "security-group", "label": "Database Isolation", "wraps": ["rls", "tables", "farmer-rls", "plot-rls", "rel-rls", "kv-rls"] }
+  ],
+  "connections": [
+    { "id": "c1", "from": "km-api", "to": "api-layer", "label": "SQL subject argument", "variant": "security" },
+    { "id": "c2", "from": "api-layer", "to": "sec-def", "label": "calls transition functions" },
+    { "id": "c3", "from": "sec-def", "to": "rls", "label": "enforces via RLS", "variant": "dashed" },
+    { "id": "c4", "from": "rls", "to": "tables", "label": "row filtering", "variant": "dashed" },
+    { "id": "c5", "from": "tables", "to": "farmer-rls", "label": "applies", "variant": "dashed" },
+    { "id": "c6", "from": "tables", "to": "plot-rls", "label": "applies", "variant": "dashed" },
+    { "id": "c7", "from": "tables", "to": "rel-rls", "label": "applies", "variant": "dashed" },
+    { "id": "c8", "from": "tables", "to": "kv-rls", "label": "applies", "variant": "dashed" }
+  ],
+  "cards": [
+    { "dot": "rose", "title": "Known Gap (ISS-SEC-001)", "items": ["km_api role can call SECURITY DEFINER functions with any Farmer subject", "Theft of database credential bypasses API ownership checks", "Not end-to-end RLS isolation — do not describe as such"] },
+    { "dot": "amber", "title": "Unverified", "items": ["RLS policies not applied to real database", "Migration 0001–0009 never executed", "Restricted-role access not tested"] },
+    { "dot": "emerald", "title": "Implemented (code)", "items": ["Fail-closed default adapters", "Server-side role/tier lookup (not from token claims)", "No secrets in client bundles (source scan: 0 patterns)"] }
+  ]
+}

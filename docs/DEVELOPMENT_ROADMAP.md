@@ -1,5 +1,7 @@
 # Kisan Mitra AI – Development Roadmap (Dependency Structure)
 
+For the current code-verified status and proposed execution order, use the [implementation audit](IMPLEMENTATION_AUDIT.md), [phased implementation roadmap](PHASED_IMPLEMENTATION_ROADMAP.md), and [permanent Task Completion Log](TASK_COMPLETION_LOG.md). This document remains a task-ID and dependency inventory; contradictory dependencies are identified in the audit.
+
 ---
 
 ## Document Control
